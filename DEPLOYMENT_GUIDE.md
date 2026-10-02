@@ -79,14 +79,14 @@ Add these variables:
 | Key | Value | Notes |
 |-----|-------|-------|
 | `DATABASE_URL` | Paste your Neon connection string | From Step 1.3 |
-| `NEXTAUTH_SECRET` | `jyTUiwuKUCdP7w39GV6KSsjFsOtQrhZUS82DlOl8MM8=` | Already generated |
+| `NEXTAUTH_SECRET` | `<paste value from: npx auth secret>` | Never commit this |
 | `NEXTAUTH_URL` | `https://your-app-name.vercel.app` | Replace with actual domain* |
 | `EMAIL_SERVER` | (leave empty) | Optional - for production |
 | `EMAIL_FROM` | `Only Books <no-reply@example.com>` | Optional |
 | `UNLOCK_THRESHOLD` | `3` | From your existing config |
 | `MIN_OVERLAP` | `2` | From your existing config |
 | `POPULAR_BOOK_CAP` | `100` | From your existing config |
-| `CRON_SECRET` | `94063b9fa83446fcca4f45400b9988b35bc89d9f29262e39` | From your existing config |
+| `CRON_SECRET` | `<paste value from your local .env>` | Never commit this |
 
 *Your Vercel domain will be something like `only-books-xxxxx.vercel.app` — you can update this after deployment if needed.
 
