@@ -19,6 +19,9 @@ export async function sendMagicLink(_prevState: SignInFormState, formData: FormD
     return { sent: true };
   } catch (err) {
     if (err instanceof AuthError) {
+      // The user-facing copy stays generic; without this the underlying cause
+      // (adapter/database failures, SMTP errors) is swallowed entirely.
+      console.error("[signin] AuthError:", err.type, err.cause ?? err.message);
       return { error: "Could not send sign-in link. Please try again." };
     }
     throw err;
